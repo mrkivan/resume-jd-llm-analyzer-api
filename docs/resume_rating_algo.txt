@@ -1,0 +1,58 @@
+✅ Example 1: Skill Match Weighting Algorithm
+Rate the resume out of 100 using the following logic:
+
+- Match 100% if all required job description skills and tools are present in the resume.
+- Deduct 2 points for each missing required skill/tool.
+- If more than 50% of required skills/tools are missing, cap the score at 60.
+- Bonus: Add 5 points if certifications are directly relevant.
+- Round the final score to the nearest whole number.
+
+✅ Example 2: Weighted Criteria Breakdown
+Calculate a rating out of 100 using this weighted breakdown:
+
+- Skills match (50 points): Compare key_skills and technologies from both resume and JD. Full match = 50. Deduct proportionally.
+- Years of experience (20 points): If experience meets or exceeds JD expectations = 20, else deduct proportionally.
+- Relevant certifications (10 points): If matching certs are found = 10, else 0.
+- Bonus (up to 20 points): Award based on notable achievements, extra relevant skills, or well-aligned roles.
+
+Sum the above and return a final score out of 100.
+
+✅ Example 3: Penalty-Based Scoring
+Start from a base score of 100. Deduct points as follows:
+
+- 5 points for each missing key skill or technology required in the JD.
+- 10 points if years of experience is below the required level.
+- 5 points if no relevant certifications are found.
+- 5–10 points if the resume appears generic or poorly aligned to the JD.
+Final score must be between 0 and 100. Round to the nearest integer.
+
+✅ Best Overall: Example 2 – Weighted Criteria Breakdown
+Why:
+    Balanced and structured — each factor (skills, experience, certs, extras) has a defined weight.
+    Scales well across different job types and resume styles.
+    Easy to adjust weights based on use case.
+
+Use When:
+    You want consistency across varied roles (technical, managerial, etc.)
+    You want more explainable and tweakable output.
+
+⚙️ Example 1 – Skill Match Weighting
+Pros:
+    Simple and fast.
+    Clear scoring tied mostly to skill match.
+
+Cons:
+    Less nuanced (ignores experience or bonus traits).
+    May give similar scores to resumes with different strengths.
+
+🛠️ Example 3 – Penalty-Based Scoring
+Pros:
+    Good when you want to start from a perfect match and reduce.
+    Works well for strict job fit scenarios.
+
+Cons:
+    Negative framing might over-penalize resumes missing a few minor points.
+
+✅ Recommendation
+    Use Example 2 if you want smart, balanced scoring that considers skills, experience, certifications, and bonus traits.
+    It's the most scalable and customizable.
