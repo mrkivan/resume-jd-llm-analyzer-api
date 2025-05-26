@@ -19,7 +19,7 @@ A FastAPI-based backend that intelligently matches resumes with job descriptions
 
 ### Prerequisites
 
-- Python 3.10+
+- Python 3.9 or more
 - Ollama installed with `llama3.2` model pulled
 
 ### Setup
@@ -27,6 +27,7 @@ A FastAPI-based backend that intelligently matches resumes with job descriptions
 ```bash
 git clone https://github.com/your-username/resume-jd-llm-analyzer-api.git
 cd resume-jd-llm-analyzer-api
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+python -m venv .venv
+source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 pip install -r requirements.txt
+uvicorn api.main:app --reload
